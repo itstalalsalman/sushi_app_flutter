@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_dev/components/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -14,6 +15,7 @@ class IntroPage extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
           const SizedBox(height: 25,),
           //shop name
@@ -53,10 +55,13 @@ class IntroPage extends StatelessWidget {
         
           //get started button
 
+          MyButton(text: "Get Started", onTap: (){
+            //go to menu
+            Navigator.pushNamed(context, '/menupage');
+          },)
 
 
 
-          
         ],),
       ),
     );
